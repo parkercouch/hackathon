@@ -22,7 +22,7 @@ const ALL_DATA = [
 
 class App extends Component {
   state = {
-    currentYear: 2011,
+    currentYear: 2013,
     currentMap: 0,
   }
 
@@ -48,6 +48,7 @@ class App extends Component {
     const map = 
       <Map
         title={titles[currentMap]}
+        year={currentYear}
         description={currentMapData.description}
         data={currentMapData[currentYear]}
         colors={currentMapData.colors}

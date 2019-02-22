@@ -3,8 +3,8 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
 const Header = (props) => { 
-  const selected = "f5 h2-5 lh-copy ttu fw5 link dim ba bw1 ph3 pb3 pt1 mb2 dib black bg-white pointer selected relative shadow-5";
-  const notSelected = "f5 h2 ttu fw5 link dim ph3 pb3 pt1 mb2 dib white bg-black pointer";
+  const selected = "f5 h2-5 lh-copy ttu fw5 link dim ba bw1 ph3 pb3 pt1 mh3 mb2 dib black bg-white pointer selected relative shadow-5";
+  const notSelected = "f5 h2 ttu fw5 link dim ph3 pb3 pt1 mb2 mh3 dib white bg-black pointer";
 
   return (
     <header className="bg-white tc ma0 pa0">
