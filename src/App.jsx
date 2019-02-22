@@ -4,11 +4,19 @@ import './App.css';
 import Map from './components/Map';
 import Header from './components/Header';
 
-import { lifeExpectancy } from './data/lifeExpectancy2011';
+import { lifeExpectancy } from './data/life_expectancy_1994_thru_2013';
+import { gdp } from './data/GDP_1994_thru_2013';
+import { imports } from './data/Imports_1994_thru_2013';
+import { exports as countryExports } from './data/Exports_1994_thru_2013';
+import { co2Emissions } from './data/CO2emissions_1994_thru_2013';
 
 
 const ALL_DATA = [
   lifeExpectancy,
+  co2Emissions,
+  gdp,
+  countryExports,
+  imports
 ];
 
 

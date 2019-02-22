@@ -7,7 +7,7 @@ const Header = (props) => {
   const notSelected = "f4 lh-copy h3 ttu fw5 link dim ph3 pb3 pt3 mb2 dib white bg-black pointer";
 
   return (
-    <header className="bg-white tc ">
+    <header className="bg-white tc">
       <h1
         className="f1"
       >
@@ -30,7 +30,7 @@ const Header = (props) => {
           <Slider
             className="dib measure ba br-pill bw1 mh3 mt2"
             onChange={props.handleChangeYear}
-            min={2011}
+            min={1994}
             max={2013}
             defaultValue={2013}
             step={1}

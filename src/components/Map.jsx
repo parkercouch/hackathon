@@ -4,8 +4,8 @@ import { Chart } from "react-google-charts";
 
 const Map = (props) => (
   <div className="map">
-    <h2 className="f2 tl ttu">{props.title}</h2>
-    <p className="f5 tl">{props.description}</p>
+    <h2 className="f2 tl ttu mb3">{props.title}</h2>
+    <p className="f5 tl mb4">{props.description}</p>
     <Chart
       className="display-map ba bw1"
       chartEvents={[
