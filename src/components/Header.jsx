@@ -9,7 +9,7 @@ const Header = (props) => {
   return (
     <header className="bg-white tc ma0 pa0">
       <h1
-        className="f2 mt2 mb3 mh0 pa0 ttu"
+        className="f1 mt2 mb3 mh0 pa0 ttu"
       >
         Developing World
       </h1>
