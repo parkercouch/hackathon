@@ -2,6 +2,10 @@
   "name": "hackathon",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.4.1",
+    "node": "v11.3.0"
+  },
   "dependencies": {
     "rc-slider": "^8.6.5",
     "react": "^16.8.3",

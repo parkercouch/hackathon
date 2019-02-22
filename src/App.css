@@ -43,8 +43,29 @@
   color: blue
 }
 
-.display-map {
+/* .display-map {
   border: 5px solid red;
   margin: 20px;
   margin-left: auto;
+} */
+
+.slider-container p {
+  display: inline;
+}
+
+.slider {
+  border: 2px solid red;
+  display: inline-block;
+}
+
+.h3-5 {
+  height: 5rem;
+}
+
+.w8 {
+  width: 50rem;
+}
+
+.selected {
+  top: -10px;
 }

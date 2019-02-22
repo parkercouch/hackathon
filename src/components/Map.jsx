@@ -3,9 +3,11 @@ import { Chart } from "react-google-charts";
 
 
 const Map = (props) => (
-  <div className="App">
-    <h2>{props.title}</h2>
-    <Chart className="display-map"
+  <div className="map">
+    <h2 className="f2 tl ttu">{props.title}</h2>
+    <p className="f5 tl">{props.description}</p>
+    <Chart
+      className="display-map ba bw1"
       chartEvents={[
         {
           eventName: "select",
@@ -19,10 +21,11 @@ const Map = (props) => (
         }
       ]}
       chartType="GeoChart"
-      width="80%"
+      width="100%"
       height="100%"
       data={props.data}
-      options={{colorAxis: { colors: ['#E3F2FD', '#0D47A1'] }}}
+      // options={{colorAxis: { colors: ['#E3F2FD', '#0D47A1'] }}}
+      options={{colorAxis: { colors: props.colors }}}
       mapsApiKey="AIzaSyCR1dYhltGUWSPjQaJF5XA_fDDWIaziqRg"
     />
   </div>

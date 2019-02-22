@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
-
 import Map from './components/Map';
 import Header from './components/Header';
 
@@ -18,6 +15,7 @@ const ALL_DATA = [
 class App extends Component {
   state = {
     currentYear: 2011,
+    currentMap: 0,
   }
 
   changeYear = (currentYear) => ( 
@@ -26,22 +24,42 @@ class App extends Component {
     })
   );
 
+  changeMap = (currentMap) => (
+    this.setState({
+      currentMap,
+    })
+  );
+
   render() {
-    const wrapperStyle = { width: 400, margin: 50 };
     const titles = ALL_DATA.map((dataset) => dataset.title);
-    const allMaps = ALL_DATA.map((dataset, i) => (
-      <Map id={`map${i}`} key={i} title={titles[i]} data={dataset[this.state.currentYear]} />
-    ));
+    const currentYear = this.state.currentYear;
+    const currentMap = this.state.currentMap;
+    const currentMapData = ALL_DATA[this.state.currentMap];
+
+
+    const map = 
+      <Map
+        title={titles[currentMap]}
+        description={currentMapData.description}
+        data={currentMapData[currentYear]}
+        colors={currentMapData.colors}
+      />
+
+
 
     return (
-      <div className="App">
-        <Header mapNames={titles} />
+      <div className="App helvetica">
+        <Header
+          mapNames={titles}
+          currentMap={currentMap}
+          handleChangeYear={(val) => this.changeYear(val)}
+          handleChangeMap={(id) => this.changeMap(id)}
+        />
 
-        <div style={wrapperStyle}>
-          <Slider onChange={(val) => this.changeYear(val)} min={2011} max={2013} defaultValue={2013} marks={{ 2011: 2011, 2012: 2012, 2013: 2013 }} step={null} />
-        </div>
+        <main className="w8 center">
+          {map}
+        </main>
 
-        {allMaps}
       </div>
     );
   }
