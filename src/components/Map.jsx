@@ -5,7 +5,7 @@ import { Chart } from "react-google-charts";
 const Map = (props) => (
   <div className="map">
     <h2 className="f2 tl ttc mb3 flex">{props.title}<span className="dib tr ml-auto">{props.year}</span></h2>
-    <p className="f5 tl mb4">{props.description}</p>
+    {/* <p className="f5 tl mb4">{props.description}</p> */}
     <Chart
       className="display-map ba bw1"
       chartEvents={[
